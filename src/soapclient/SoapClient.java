@@ -23,8 +23,8 @@ public class SoapClient {
     }
     
     public void callApi() {
-        String soapEndpointUrl = "http://localhost:8080/soap/adminauth";
-        String soapAction = "http://localhost:8080/soap/adminauth";
+        String soapEndpointUrl = "http://178.62.24.12:8080/soap/admin/auth";
+        String soapAction = "http://178.62.24.12:8080/soap/admin/auth";
 
         callSoapWebService(soapEndpointUrl, soapAction);
     }
@@ -41,12 +41,13 @@ public class SoapClient {
 
             /*
             Constructed SOAP Request Message:
-            <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myNamespace="https://www.w3schools.com/xml/">
-                <SOAP-ENV:Header/>  
+            <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="http://soap/">
+                <SOAP-ENV:Header/>
                 <SOAP-ENV:Body>
-                    <myNamespace:CelsiusToFahrenheit>
-                        <myNamespace:Celsius>100</myNamespace:Celsius>
-                    </myNamespace:CelsiusToFahrenheit>
+                    <ns0:login>
+			<email>test</email>
+			<password>tet</password>
+                    </ns0:login>
                 </SOAP-ENV:Body>
             </SOAP-ENV:Envelope>
             */
